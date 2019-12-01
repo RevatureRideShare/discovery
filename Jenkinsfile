@@ -97,7 +97,6 @@ pipeline {
 	stage('Store to S3'){
 		    steps{
 			sh 'aws s3 cp --recursive ./target s3://rideshare-client/jars'
-			sh 'cp target/EurekaExample-0.0.1-SNAPSHOT.jar ~'
 		    }
 	    }
         
